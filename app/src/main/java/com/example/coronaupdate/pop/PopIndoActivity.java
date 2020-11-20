@@ -19,6 +19,7 @@ import com.example.coronaupdate.R;
 import com.example.coronaupdate.model.indo.DataItem;
 import com.example.coronaupdate.service.CoronaService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PopIndoActivity extends AppCompatActivity {
@@ -78,13 +79,20 @@ public class PopIndoActivity extends AppCompatActivity {
         @Override
         public void onSuccess(List<DataItem> items) {
 
+            List<DataItem> realItems = new ArrayList<>();
+            for(DataItem row: items){
+                if (!row.getProvinsi().toLowerCase().contains("indonesia")) {
+                    realItems.add(row);
+                }
+            }
+
             final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
             linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
             rvRecyclerView.setLayoutManager(linearLayoutManager);
-            rvAdapter = new CoronaIndoAdapter(items,sDate);
+            rvAdapter = new CoronaIndoAdapter(realItems,sDate);
             rvRecyclerView.setAdapter(rvAdapter);
 
-            for(int i = 0; i < items.size(); i++){
+            for(int i = 0; i < realItems.size(); i++){
                 Log.d("Hasil : NAMA KOTA -> ", items.get(i).getProvinsi());
                 Log.d("Hasil : CONFIRMED -> ", String.valueOf(items.get(i).getKasusPosi()));
             }
