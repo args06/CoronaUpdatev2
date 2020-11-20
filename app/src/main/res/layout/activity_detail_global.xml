@@ -177,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:text="For more information!"
                 android:textColor="@android:color/black"
-                android:textSize="28sp"
+                android:textSize="26sp"
                 android:gravity="center_horizontal"/>
 
         </LinearLayout>
