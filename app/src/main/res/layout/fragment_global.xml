@@ -133,8 +133,7 @@
                     <TextView
                         android:id="@+id/tv_value_confirmed_global"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Value"/>
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -155,8 +154,7 @@
                     <TextView
                         android:id="@+id/tv_value_recovered_global"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Value"/>
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -177,8 +175,7 @@
                     <TextView
                         android:id="@+id/tv_value_deaths_global"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Value"/>
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
